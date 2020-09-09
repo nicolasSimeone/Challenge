@@ -90,7 +90,8 @@ class MainActivity : AppCompatActivity() {
 
         menuInflater.inflate(R.menu.menu, menu)
         val menuItem = menu!!.findItem(R.id.search)
-
+        val favoriteItem = menu!!.findItem(R.id.action_star)
+        favoriteItem.setVisible(false)
         if(menuItem != null)
         {
             val searchView = menuItem.actionView as SearchView
